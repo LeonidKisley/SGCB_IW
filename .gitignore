@@ -1,0 +1,66 @@
+# ============================================================
+# SGCB - Archivo de exclusiones de Git
+# Evita subir dependencias, secretos, builds y archivos basura.
+# ============================================================
+
+# ------------------------------------------------------------
+# Dependencias instaladas por npm
+# ------------------------------------------------------------
+node_modules/
+jspm_packages/
+
+# ------------------------------------------------------------
+# Variables de entorno: NUNCA deben viajar al repositorio
+# Se conserva .env.example como plantilla pública.
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+# Builds de producción
+# ------------------------------------------------------------
+dist/
+build/
+.vite/
+.next/
+out/
+
+# ------------------------------------------------------------
+# Logs de errores y depuración
+# ------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------
+# Pruebas y cobertura
+# ------------------------------------------------------------
+coverage/
+.nyc_output/
+
+# ------------------------------------------------------------
+# Sistema operativo y editores
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ------------------------------------------------------------
+# Cachés y archivos temporales
+# ------------------------------------------------------------
+.cache/
+.temp/
+tmp/
+*.pid
+*.seed

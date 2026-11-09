@@ -1,0 +1,28 @@
+/* ============================================================
+   Estilos globales mínimos
+   ------------------------------------------------------------
+   Tailwind se encarga del 100% del diseño mediante clases
+   utilitarias. Aquí solo definimos la base tipográfica y el
+   fondo general de la aplicación.
+   ============================================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Desplazamiento suave al navegar por anclas. */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Fondo neutro, texto oscuro y suavizado de fuentes. */
+    @apply bg-slate-100 text-slate-800 antialiased;
+  }
+
+  ::selection {
+    /* Color de selección de texto coherente con la marca. */
+    @apply bg-indigo-200 text-indigo-900;
+  }
+}
